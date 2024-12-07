@@ -8,9 +8,11 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'BarberStyle | Estilo y confianza en cada corte',
-  description: 'Barbería moderna con servicios profesionales de corte, afeitado y estilizado',
+  title: 'PerruRapaBarberShop | Estilo y confianza en cada corte',
+  description: 'Barbería moderna en Lince con servicios profesionales de corte, afeitado y estilizado.',
+  keywords: 'barbería, corte de cabello, afeitado, estilizado, Lince, Lima',
 };
+
 
 export default function RootLayout({
   children,

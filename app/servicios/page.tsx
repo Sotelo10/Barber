@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next/link'; // Importa Link de Next.js
 
 const services = [
   {
@@ -70,7 +70,7 @@ export default function ServiciosPage() {
               <p className="text-lg text-gray-600 mb-4">{service.description}</p>
               <p className="text-xl font-semibold text-gray-800 mb-4">{service.price}</p>
               <Button variant="outline" className="w-full">
-                <Link href="https://wa.link/4pzr4p">
+                <Link href="https://wa.link/4pzr4p"> {/* Utiliza Link de Next.js */}
                   Reserva Cita
                 </Link>
               </Button>
