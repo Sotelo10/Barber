@@ -8,37 +8,43 @@ const services = [
     image: '/corteclasico.jpeg',
     title: "Corte Clásico",
     description: "Corte tradicional con acabado moderno",
-    price: "S/20"
+    price: "S/20",
+    link: "https://wa.link/4pzr4p"
   },
   {
     image: '/barba.jpeg',
     title: "Arreglo de Barba",
     description: "Perfilado y diseño personalizado de barba",
-    price: "S/5-10"
+    price: "S/5-10",
+    link: "https://wa.link/4pzr4p"
   },
   {
     image: '/Mascarilla.jpg',
     title: "Mascarilla Carbon",
     description: "Mascarilla para quitar el puntos negros",
-    price: "S/10"
+    price: "S/10",
+    link: "https://wa.link/4pzr4p"
   },
   {
     image: '/C+B.jpg',
     title: "Corte + Barba",
     description: "Servicio completo de corte y arreglo de barba",
-    price: "S/25-30"
+    price: "S/25-30",
+    link: "https://wa.link/4pzr4p"
   },
   {
     image: '/C+M.jpeg',
     title: "Corte + Mascarilla",
     description: "Servicio completo de corte y Mascarilla facial",
-    price: "S/27"
+    price: "S/27",
+    link: "https://wa.link/4pzr4p"
   },
   {
     image: '/gel.jpg',
     title: "Venta de Productos",
     description: "Venta de productos de Barberia",
-    price: "S/5-30"
+    price: "S/5-30",
+    link: "https://wa.link/4pzr4p"
   }
 ];
 
@@ -69,11 +75,11 @@ export default function ServiciosPage() {
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">{service.title}</h3>
               <p className="text-lg text-gray-600 mb-4">{service.description}</p>
               <p className="text-xl font-semibold text-gray-800 mb-4">{service.price}</p>
-              <Button variant="outline" className="w-full">
-                <Link href="https://wa.link/4pzr4p"> {/* Utiliza Link de Next.js */}
+              <Link href={service.link}> {/* Envolvemos todo el Button con Link */}
+                <Button variant="outline" className="w-full">
                   Reserva Cita
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
