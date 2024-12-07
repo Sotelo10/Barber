@@ -20,7 +20,6 @@ export function Navigation() {
 
   return (
     <header className="relative">
-      {/* Imagen fija, ajustable para dispositivos pequeños */}
       <div className="fixed top-[-20px] left-1/2 transform -translate-x-1/2 z-20 md:top-[-40px]">
         <Image
           src="https://i.ibb.co/WxKS6Jf/logoperru.png"
@@ -32,15 +31,15 @@ export function Navigation() {
         />
       </div>
 
-   
+      {/* Navbar con fondo semi-transparente */}
       <nav className="fixed top-0 left-0 right-0 z-10 container mx-auto px-4 h-16 flex items-center justify-between bg-white bg-opacity-80 backdrop-blur-md rounded-lg shadow-lg border-b">
-     
+        {/* Logo y nombre */}
         <Link href="/" className="flex items-center space-x-3">
           <Scissors className="h-8 w-8 text-primary" />
           <span className="text-lg font-semibold text-gray-900">PerruRapaBarberShop</span>
         </Link>
 
-     
+        {/* Navegación en desktop */}
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <Link
@@ -52,7 +51,7 @@ export function Navigation() {
             </Link>
           ))}
 
-       
+          {/* Botón de Reservar Cita */}
           <a
             href="https://wa.link/4pzr4p"
             target="_blank"
@@ -62,14 +61,17 @@ export function Navigation() {
           </a>
         </div>
 
-       
+        {/* Navegación móvil */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6 text-gray-700" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent 
+            side="right"
+            className="bg-white bg-opacity-90 backdrop-blur-lg shadow-lg p-6" // Fondo semitransparente
+          >
             <div className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
                 <Link
@@ -81,7 +83,8 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              
+
+              {/* Botón de Reservar Cita en el menú móvil */}
               <a
                 href="https://wa.link/4pzr4p"
                 target="_blank"
